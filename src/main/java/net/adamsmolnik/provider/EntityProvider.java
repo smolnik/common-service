@@ -1,6 +1,10 @@
 package net.adamsmolnik.provider;
 
-import net.adamsmolnik.entity.FileEntity;
+import net.adamsmolnik.entity.EntityDetails;
+import net.adamsmolnik.entity.EntityReference;
+import net.adamsmolnik.entity.EntityReferenceDest;
+import net.adamsmolnik.entity.Entity;
+import net.adamsmolnik.entity.EntityReferenceSource;
 
 /**
  * @author ASmolnik
@@ -8,6 +12,10 @@ import net.adamsmolnik.entity.FileEntity;
  */
 public interface EntityProvider {
 
-    FileEntity getFileEntity(String objectKey);
+    Entity getEntity(EntityReference entityReference);
+
+    EntityDetails copy(EntityReferenceSource ers, EntityReferenceDest erd);
+
+    EntityDetails move(EntityReferenceSource ers, EntityReferenceDest erd);
 
 }
