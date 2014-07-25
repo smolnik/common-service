@@ -12,6 +12,6 @@ public interface Configuration {
 
     String getServiceValue(String serviceName, String key);
 
-    Map<String, String> getServiceMap(String serviceName);
+    Map<String, String> getServiceConfMap(String serviceName);
 
 }
