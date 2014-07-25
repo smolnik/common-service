@@ -15,5 +15,6 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		<finalName>common-service</finalName>
 	</build>
 </project>
