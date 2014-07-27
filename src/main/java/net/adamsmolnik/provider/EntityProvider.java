@@ -1,9 +1,10 @@
 package net.adamsmolnik.provider;
 
+import java.io.InputStream;
+import net.adamsmolnik.entity.Entity;
 import net.adamsmolnik.entity.EntityDetails;
 import net.adamsmolnik.entity.EntityReference;
 import net.adamsmolnik.entity.EntityReferenceDest;
-import net.adamsmolnik.entity.Entity;
 import net.adamsmolnik.entity.EntityReferenceSource;
 
 /**
@@ -17,5 +18,7 @@ public interface EntityProvider {
     EntityDetails copy(EntityReferenceSource ers, EntityReferenceDest erd);
 
     EntityDetails move(EntityReferenceSource ers, EntityReferenceDest erd);
+
+    void save(EntityReference entityReference, long size, InputStream is);
 
 }
