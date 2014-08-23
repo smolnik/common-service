@@ -8,6 +8,8 @@ import java.util.Map;
  */
 public interface Configuration {
 
+    boolean isSystemCredentialsExist();
+
     String getGlobalValue(String key);
 
     String getServiceValue(String serviceName, String key);

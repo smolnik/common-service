@@ -19,6 +19,8 @@ public interface EntityProvider {
 
     EntityDetails move(EntityReferenceSource ers, EntityReferenceDest erd);
 
-    void save(EntityReference entityReference, long size, InputStream is);
+    void persist(EntityReference entityReference, long size, InputStream is);
+
+    void setNewMetadata(EntityReference entityReference, String key, String value);
 
 }
