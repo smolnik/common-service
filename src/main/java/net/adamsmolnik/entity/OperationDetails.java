@@ -4,7 +4,7 @@ package net.adamsmolnik.entity;
  * @author ASmolnik
  *
  */
-public class EntityDetails {
+public class OperationDetails {
 
     private final EntityReference entityReference;
 
@@ -12,7 +12,7 @@ public class EntityDetails {
 
     private final String internalFootprint;
 
-    public EntityDetails(EntityReference entityReference, String version, String internalFootprint) {
+    public OperationDetails(EntityReference entityReference, String version, String internalFootprint) {
         this.entityReference = entityReference;
         this.version = version;
         this.internalFootprint = internalFootprint;

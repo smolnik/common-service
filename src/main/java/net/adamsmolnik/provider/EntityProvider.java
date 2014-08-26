@@ -1,8 +1,9 @@
 package net.adamsmolnik.provider;
 
 import java.io.InputStream;
+import java.util.Map;
 import net.adamsmolnik.entity.Entity;
-import net.adamsmolnik.entity.EntityDetails;
+import net.adamsmolnik.entity.OperationDetails;
 import net.adamsmolnik.entity.EntityReference;
 import net.adamsmolnik.entity.EntityReferenceDest;
 import net.adamsmolnik.entity.EntityReferenceSource;
@@ -15,12 +16,14 @@ public interface EntityProvider {
 
     Entity getEntity(EntityReference entityReference);
 
-    EntityDetails copy(EntityReferenceSource ers, EntityReferenceDest erd);
-
-    EntityDetails move(EntityReferenceSource ers, EntityReferenceDest erd);
+    OperationDetails copy(EntityReferenceSource ers, EntityReferenceDest erd);
 
     void persist(EntityReference entityReference, long size, InputStream is);
 
-    void setNewMetadata(EntityReference entityReference, String key, String value);
+    void delete(EntityReference entityReference);
+
+    void setNewMetadata(EntityReference er, Map<String, String> metadata);
+
+    Map<String, String> getMetadata(EntityReference entityReference);
 
 }
