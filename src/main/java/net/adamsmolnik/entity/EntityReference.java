@@ -6,7 +6,7 @@ package net.adamsmolnik.entity;
  */
 public class EntityReference {
 
-    private String entityReferenceKey;
+    private final String entityReferenceKey;
 
     public EntityReference(String entityReferenceKey) {
         this.entityReferenceKey = entityReferenceKey;
@@ -14,6 +14,11 @@ public class EntityReference {
 
     public String getEntityReferenceKey() {
         return entityReferenceKey;
+    }
+
+    @Override
+    public String toString() {
+        return "EntityReference [entityReferenceKey=" + entityReferenceKey + "]";
     }
 
 }
