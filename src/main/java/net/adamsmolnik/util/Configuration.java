@@ -8,6 +8,8 @@ import java.util.Map;
  */
 public interface Configuration {
 
+    String getLocalValue(String key);
+
     String getGlobalValue(String key);
 
     String getServiceValue(String serviceName, String key);
