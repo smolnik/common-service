@@ -12,4 +12,8 @@ public class ServiceException extends RuntimeException {
         super(throwable);
     }
 
+    public ServiceException(String message) {
+        super(message);
+    }
+
 }
